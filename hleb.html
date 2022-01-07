@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A simple content slideshow with circular elements and a bouncy navigation effect." />
+		<meta name="keywords" content="slideshow, dynamic.js, elastic, circle, template, web design" />
+		<meta name="author" content="Codrops" />
+			<title>HLEB</title>
+		<link rel="stylesheet" type="text/css" href="Slideshow/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="Slideshow/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="Slideshow/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-menu" viewBox="0 0 119 25">
+				<title>menu</title>
+				<path d="M36,8 L36,0 L100,0 L100,8 L36,8 Z M0,8 L0,0 L24,0 L24,8 L0,8 Z M0,28 L0,20 L71,20 L71,28 L0,28 Z"/>
+			</symbol>
+			<symbol id="icon-close" viewBox="0 0 24 24">
+				<title>close</title>
+				<path d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"/>
+			</symbol>
+		</svg>
+		
+		<main>
+			<div class="frame">
+				<header class="codrops-header">
+					<h1 class="codrops-header__title"><img src="img/hlibok_mainlogo1.jpg" width="60" height="60" alt=""/></h1>
+				</header>
+				<p class="info">12 &mdash; 24 May 2014 &middot; UKRAINA &middot; Chernivtsi &middot; UA</p>
+			</div>
+			
+			<nav class="menu">
+				<div class="menu__item menu__item--1" data-direction="bt">
+					<div class="menu__item-inner">
+						<div class="mainmenu">
+							<a href="index.html" class="mainmenu__item">ГОЛОВНА</a>
+							<a href="#" class="mainmenu__item">КОНТАКТИ</a>
+							<a href="#" class="mainmenu__item">О НАС</a>
+						</div>
+						<p class="label label--topleft label--vert-mirror">без соли, без хлеба худая беседа</p>
+						<p class="label label--bottomright label--vert">без хлеба куска, везде тоска</p>
+					</div>
+				</div>
+				<div class="menu__item menu__item--2" data-direction="lr">
+					<div class="menu__item-inner">
+						<div class="menu__item-map"></div>
+						<a href="#" class="menu__item-hoverlink">ми знаходимося</a>
+					</div>
+				</div>
+				<div class="menu__item menu__item--3" data-direction="bt">
+					<div class="menu__item-inner">
+						<div class="sidemenu">
+							<a href="hleb.html" class="sidemenu__item"><span class="sidemenu__item-inner">Хлiб</span></a>
+							<a href="#" class="sidemenu__item"><span class="sidemenu__item-inner">Здоба</span></a>
+							<a href="#" class="sidemenu__item"><span class="sidemenu__item-inner">Колачi Святковi</span></a>
+							<a href="#" class="sidemenu__item"><span class="sidemenu__item-inner">...</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item menu__item--4" data-direction="rl">
+					<div class="menu__item-inner">
+						<p class="label label--topleft label--line">тепло наших рук</p>
+						<a href="#" class="menu__item-link">О нашiй<br>продукцii</a>
+					</div>
+				</div>
+				<div class="menu__item menu__item--5" data-direction="tb">
+					<div class="menu__item-inner">
+						<p class="quote">У кого хлеб родится, тот всегда веселится.</p>
+					</div>
+				</div>
+				<button class="action action--menu"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
+				<button class="action action--close"><svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg></button>
+			</nav>
+		</main>
+		
+		<div class="container">
+				<h1></h1>
+			<div class="deco deco--title"></div>
+			<div id="slideshow" class="slideshow">
+				<div class="slide">
+					<h2 class="slide__title slide__title--preview">Батон
+						<span class="slide__price">15грн</span>
+					</h2>
+					<div class="slide__item">
+						<div class="slide__inner">
+							<img class="slide__img slide__img--small" src="img/hlib-1.jpg" alt="Some image" />
+							<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="slide__content">
+						<div class="slide__content-scroller">
+							<img class="slide__img slide__img--large" src="img/hlib-1.jpg" alt="Some image" />
+							<div class="slide__details">
+								<h2 class="slide__title slide__title--main">Батон</h2>
+								<p class="slide__description">Борошно в/г, дріжджі, сіль, цукор, маргарин, молоко, яйця. Вага 450 г. </p>
+								<div>
+									<span class="slide__price slide__price--large">15грн</span>
+									<button class="button button--buy">Заказать</button>
+								</div>
+							</div><!-- /slide__details -->
+						</div><!-- slide__content-scroller -->
+					</div><!-- slide__content -->
+				</div>
+				<div class="slide">
+					<h2 class="slide__title slide__title--preview">Хліб висівковий
+						 <span class="slide__price">19грн</span></h2>
+					<div class="slide__item">
+						<div class="slide__inner">
+							<img class="slide__img slide__img--small" src="img/hlib-2.jpg" alt="Some image" />
+							<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="slide__content">
+						<div class="slide__content-scroller">
+							<img class="slide__img slide__img--large" src="img/hlib-2.jpg" alt="Some image" />
+							<div class="slide__details">
+								<h2 class="slide__title slide__title--main">Хліб висівковий</h2>
+								<p class="slide__description">Борошно пшеничне в/г, висівки пшеничні, сіль, цукор, дріжджі, 
+									олія. До складу висівкового хлібу входить корисна клітковина, яка очищує кишківник від шлаків.
+									Чудовий дієтичний хліб. Випікається на натуральній пшеничній заквасці. Вага 700 г
+								</p>
+								<div>
+									<span class="slide__price slide__price--large">19грн</span>
+									<button class="button button--buy">Заказать</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<h2 class="slide__title slide__title--preview">Хліб домашній
+						<span class="slide__price">18грн</span>
+					</h2>
+					<div class="slide__item">
+						<div class="slide__inner">
+							<img class="slide__img slide__img--small" src="img/hlib-3.jpg" alt="Some image" />
+							<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="slide__content">
+						<div class="slide__content-scroller">
+							<img class="slide__img slide__img--large" src="img/hlib-3.jpg" alt="Some image" />
+							<div class="slide__details">
+								<h2 class="slide__title slide__title--main">Хліб домашній</h2>
+								<p class="slide__description">
+									Борошно пшеничне в/г, сіль, цукор, дріжджі пресовані пекарські,
+									олія соняшникова рафінована. Вага 650 г
+								</p>
+								<div>
+									<span class="slide__price slide__price--large">18грн</span>
+									<button class="button button--buy">Заказать</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<h2 class="slide__title slide__title--preview">Хліб житній зі злаками<span class="slide__price">19грн</span></h2>
+					<div class="slide__item">
+						<div class="slide__inner">
+							<img class="slide__img slide__img--small" src="img/hlib-4.jpg" alt="Some image" />
+							<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="slide__content">
+						<div class="slide__content-scroller">
+							<img class="slide__img slide__img--large" src="img/hlib-4.jpg" alt="Some image" />
+							<div class="slide__details">
+								<h2 class="slide__title slide__title--main">Хліб житній зі злаками</h2>
+								<p class="slide__description">Борошно в/г, борошно житнє, опара, солод, сіль, цукор, дріжджі, 
+									сіль, олія, кориандр, льон, кмин, насіння соняшнику, насіння гарбузове. 
+									До складу додається натуральна житня закваска. Вага 700 г
+								</p>
+								<div>
+									<span class="slide__price slide__price--large">19грн</span>
+									<button class="button button--buy">Заказать</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<h2 class="slide__title slide__title--preview">Хліб подовий<span class="slide__price">19грн</span></h2>
+					<div class="slide__item">
+						<div class="slide__inner">
+							<img class="slide__img slide__img--small" src="img/hlib-5.jpg" alt="Some image" />
+							<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="slide__content">
+						<div class="slide__content-scroller">
+							<img class="slide__img slide__img--large" src="img/hlib-5.jpg" alt="Some image" />
+							<div class="slide__details">
+								<h2 class="slide__title slide__title--main">Хліб подовий</h2>
+								<p class="slide__description">Борошно пшеничне в/г, сіль, цукор, дріжджі пресовані пекарські, 
+									олія соняшникова рафінована. Додається натуральна пшенична закваска. Вага 650 г
+								</p>
+								<div>
+									<span class="slide__price slide__price--large">19грн</span>
+									<button class="button button--buy">Заказать</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<h2 class="slide__title slide__title--preview">Хліб формовий житньо-пшеничний<span class="slide__price">19грн</span></h2>
+					<div class="slide__item">
+						<div class="slide__inner">
+							<img class="slide__img slide__img--small" src="img/hlib-6.jpg" alt="Some image" />
+							<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="slide__content">
+						<div class="slide__content-scroller">
+							<img class="slide__img slide__img--large" src="img/hlib-6.jpg" alt="Some image" />
+							<div class="slide__details">
+								<h2 class="slide__title slide__title--main">Хліб формовий житньо-пшеничний</h2>
+								<p class="slide__description">Борошно пшеничне в/г, борошно житнє в/г, сіль, цукор, дріжджі, 
+									олія соняшникова рафінована. Додається натуральна житня закваска. Вага 650 г
+								</p>
+								<div>
+									<span class="slide__price slide__price--large">19грн</span>
+									<button class="button button--buy">Заказать</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<h2 class="slide__title slide__title--preview">Хліб формовий пшеничний<span class="slide__price">19грн</span></h2>
+					<div class="slide__item">
+						<div class="slide__inner">
+							<img class="slide__img slide__img--small" src="img/hlib-6.jpg" alt="Some image" />
+							<button class="action action--open" aria-label="View details"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+					<div class="slide__content">
+						<div class="slide__content-scroller">
+							<img class="slide__img slide__img--large" src="img/hlib-6.jpg" alt="Some image" />
+							<div class="slide__details">
+								<h2 class="slide__title slide__title--main">Хліб формовий пшеничний</h2>
+								<p class="slide__description">Борошно в/г, борошно 1 р, сіль, цукор, дріжджі пресовані пекарські, 
+									олія соняшникова рафінована. Додається натуральна пшенична закваска. Вага 650 г
+								</p>
+								<div>
+									<span class="slide__price slide__price--large">19грн</span>
+									<button class="button button--buy">Заказать</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="action action--close" aria-label="Close"><i class="fa fa-close"></i></button>
+			</div>
+			
+		</div><!-- /container -->
+		
+		
+		
+		
+		
+		
+		
+		<!--<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>-->
+		<script src="Slideshow/js/classie.js"></script>
+		<script src="Slideshow/js/dynamics.min.js"></script>
+		<script src="Slideshow/js/main.js"></script>
+		<!--<script src="js/base.js"></script>-->
+		<script src="js/main.js"></script>
+		<script>document.documentElement.className='js';
+			var supportsCssVars = function(){var e,t=document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }",document.head.appendChild(t),
+				e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),
+				t.parentNode.removeChild(t),e};supportsCssVars()||alert
+			("Please view this demo in a modern browser that supports CSS Variables.");
+		</script>
+		<script>
+			(function() {
+				document.documentElement.className = 'js';
+				var slideshow = new CircleSlideshow(document.getElementById('slideshow'));
+			})();
+		</script>
+	</body>
+</html>
